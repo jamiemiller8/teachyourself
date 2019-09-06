@@ -55,3 +55,6 @@ end
     g.say_hi 
     g.say_bye 
    end 
+
+
+#if we want to run this file in the terminal, type in "ruby exercise.rb" 
