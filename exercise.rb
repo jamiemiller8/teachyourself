@@ -12,10 +12,13 @@ class Greeter
 
     #Saying hi to classmates
     def say_hi
+        #if the name values = nill, which is ruby's version of null, then put a "..."
         if @names.nil?
             puts "..."
+        #respond_to? is a method for detecting whether the class has a particular method on it
         elsif @names.respond_to?("each")
             # since @names is a list, we need to iterate through it
+            # |name| is a ruby block, which are anonymous functions that can be passed into methods
             @names.each do |name|
                 puts "Hello #{name}!"
             end
@@ -37,7 +40,7 @@ class Greeter
     end 
 end 
 
-
+    #the line below says to only run the following code when this file is the main one being run
    if __FILE__ == $0
     # the line below just shortens the method when calling it so we don't have to type greeter each time
     g = Greeter.new
